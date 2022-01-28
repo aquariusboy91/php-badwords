@@ -7,8 +7,8 @@ $ai = "Companies implementing integrated automated
  In addition, next year AI will be used to rethink and redesign products, services, business
   models and overall strategies. In 2022, the use of AI will not only become more widespread, 
   but also more strategic.";
-  $ciccio = $_GET["name"];
-  $censor = "***"
+  $badword = $_GET["name"];
+  $censor = "***";
 ?> 
 
 <!DOCTYPE html>
@@ -23,8 +23,7 @@ $ai = "Companies implementing integrated automated
 
 <h1><?=$hello?></h1>
 <p><?=$ai?></p>
-<p><?=$ciccio?></p>
-<p><?=str_replace($ciccio, $censor, $ai)?></p>
+<p><?=str_replace($badword, $censor, $ai)?></p>
     
 </body>
 </html>
